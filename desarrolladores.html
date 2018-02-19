@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desarrolladores</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="header.js"></script>
+    <section>
+        <div class="banner-pantalla"><img src="img/desarrolladores_pc.png" alt=""></div>
+        <div class="banner-celular"><img src="img/desarrolladores_movil.png" alt=""></div>
+        <!--
+        <div class="caja-desarrolladores">
+            <div class="desarrollador">desarrollador</div>
+            <div class="desarrollador">desarrollador</div>
+            <div class="desarrollador">desarrollador</div>
+        </div>
+    -->
+        <div class="caja_desarrolladores_prueba">
+            <p>INVITADOS</p>
+            <div class="caja_desarrolladores_prueba_div_1"><img class="caja_desarrolladores_prueba_img_1" src="desarrolladores/desarrollador_1_bn.png" alt=""></div>
+            <div class="caja_desarrolladores_prueba_div_2"><img class="caja_desarrolladores_prueba_img_2" src="desarrolladores/desarrollador_2_bn.png" alt=""></div>
+            <div class="caja_desarrolladores_prueba_div_3"><img class="caja_desarrolladores_prueba_img_3" src="desarrolladores/desarrollador_3_bn.png" alt=""></div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer_prueba_filas">
+            <div class="footer_prueba_primera">
+                <p>About</p>
+                <ul>
+                    <a href="index.html"><li>Somos</li></a>
+                    <a href="talleres.html"><li>Talleres</li></a>
+                    <a href="desarrolladores.html"><li>Developers</li></a>
+                    <a href="sedes.html"><li>Sedes</li></a>
+                    <a href="contacto.html"><li>Contacto</li></a>
+                </ul>
+            </div>
+            <div class="footer_prueba_segunda">
+                <p>Suscribete a nuestros eventos</p>
+                <form action="" method="post">
+                    <input  class="footer_email" type="email" name="footer_email" id="footer_email" placeholder="Enter Email Addres">
+                    <input class="footer_boton" type="button" id="footer_boton"value="suscribete">
+                </form>
+            </div>
+            <div class="footer_prueba_tercera">
+                <p>Conectate con nosotros</p>
+                <div class='footer_caja_iconos'>
+                    <a href="https://www.facebook.com/cabihack/"><i class='fa fa-facebook-square' aria-hidden='true'></i></a>
+                    <a href="https://twitter.com/cabihack"><i class='fa fa-twitter-square' aria-hidden='true'></i></a>
+                    <i class='fa fa-google-plus-square' aria-hidden='true'></i>
+<!--
+                    <i class='fa fa-pinterest-square' aria-hidden='true'></i> 
+-->
+                    <i class='fa fa-instagram' aria-hidden='true'></i> 
+<!--
+                    <i class='fa fa-vimeo-square' aria-hidden='true'></i> 
+-->
+                    <a href="https://www.youtube.com/channel/UC2seJHFACtW7Yi3ffPeIk2A "><i class='fa fa-youtube-play' aria-hidden='true'></i></a> 
+                </div>
+            </div>
+        </div>
+        <div class="footer_prueba_pie">
+                <p><i class='fa fa-copyright' aria-hidden='true'></i>CabiHack 2018</p>
+                <p>terminos y condiciones</p>
+                <p>Politicas de Privacidad</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('.li-desplegable').toggleClass('active');
+                $('.iniciar').toggleClass('active1');
+                $('.header').toggleClass('active2');
+            });
+        });
+    </script>
+    <script>
+        var controladorDeLogo = false;
+            window.onscroll = function() {consideraScroll()};
+            function consideraScroll() {
+                if(window.pageYOffset>80){
+                    if(controladorDeLogo==true){
+                    }
+                    else if(controladorDeLogo==false){
+                        document.getElementsByClassName("logo")[0].classList.remove("contrae");
+                        document.getElementsByClassName("logo")[0].classList.add("expande");
+                        controladorDeLogo=true;
+                    }
+                }
+                else if(window.pageYOffset<=80){
+                    if(controladorDeLogo==true){
+                        document.getElementsByClassName("logo")[0].classList.remove("expande");
+                        document.getElementsByClassName("logo")[0].classList.add("contrae");
+                        controladorDeLogo=false;
+                    }
+                    else if(controladorDeLogo==false){
+                }
+            }
+        }
+    </script>
+</body>
+</html>

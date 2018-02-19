@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taller</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="body_prueba">
+    <script src="header.js"></script>
+    <div class="taller_caja_prueba">
+        <P class="taller_caja_prueba_p_1">Resumen de la solución</P>
+        <i class="fa fa-angle-down" id="taller_caja_prueba_i_1"></i>
+        <P class="taller_caja_prueba_p_2"><i class="fa fa-code" id="taller_caja_prueba_i_0"></i>Sobre el Proyecto</P>
+        <P class="taller_caja_prueba_p_3">Honda es una empresa automotriz de origen japonés<br>presente en el mercado peruano que vende a través de<br>diferentesconcesionarios por todo el Perú.</P>
+        <P class="taller_caja_prueba_p_4"><i class="fa fa-code" id="taller_caja_prueba_i_0"></i>¿Qué hicimos?</P>
+        <P class="taller_caja_prueba_p_5">Landing pages temporales para anunciar los nuevos<br>lanzamientos de la marca. También una renovada web que<br>agrupa todos los modelos y facilita la captación de Leads.<br>Además, gestionamos su comunidad en Facebook para<br>mantener informados a sus seguidores y potenciar la<br> promoción de sus diferentes modelos.</P>
+        <P class="taller_caja_prueba_p_6"><i class="fa fa-code" id="taller_caja_prueba_i_0"></i>Objetivos</P>
+        <P class="taller_caja_prueba_p_7">Renovar su web actual con el objetivo de<br>
+        mostrar las características de sus diferentes<br>
+        modelos y a su vez aumentar la cantidad de<br>
+        clientes potenciales.<br><br>
+        Reforzar el concepto premium de la marca<br>
+        dentro del mercado automotriz<br><br>
+        Fortalecer su comunidad en redes para<br>establecer una conexión cercana con sus<br> seguidores
+        </P>
+    </div>
+    
+<footer>
+    <div class="footer_prueba_filas">
+        <div class="footer_prueba_primera">
+            <p>About</p>
+            <ul>
+                <a href="index.html"><li>Somos</li></a>
+                <a href="talleres.html"><li>Talleres</li></a>
+                <a href="desarrolladores.html"><li>Developers</li></a>
+                <a href="sedes.html"><li>Sedes</li></a>
+                <a href="contacto.html"><li>Contacto</li></a>
+            </ul>
+        </div>
+        <div class="footer_prueba_segunda">
+            <p>Suscribete a nuestros eventos</p>
+            <form action="" method="post">
+                <input  class="footer_email" type="email" name="footer_email" id="footer_email" placeholder="Enter Email Addres">
+                <input class="footer_boton" type="button" id="footer_boton"value="suscribete">
+            </form>
+        </div>
+        <div class="footer_prueba_tercera">
+            <p>Conectate con nosotros</p>
+            <div class='footer_caja_iconos'>
+                <a href="https://www.facebook.com/cabihack/"><i class='fa fa-facebook-square' aria-hidden='true'></i></a>
+                <a href="https://twitter.com/cabihack"><i class='fa fa-twitter-square' aria-hidden='true'></i></a>
+                <i class='fa fa-google-plus-square' aria-hidden='true'></i>
+<!--
+                <i class='fa fa-pinterest-square' aria-hidden='true'></i> 
+-->
+                <i class='fa fa-instagram' aria-hidden='true'></i> 
+<!--
+                <i class='fa fa-vimeo-square' aria-hidden='true'></i> 
+-->
+                <a href="https://www.youtube.com/channel/UC2seJHFACtW7Yi3ffPeIk2A "><i class='fa fa-youtube-play' aria-hidden='true'></i></a> 
+            </div>
+        </div>
+    </div>
+    <div class="footer_prueba_pie">
+            <p><i class='fa fa-copyright' aria-hidden='true'></i>CabiHack 2018</p>
+            <p>terminos y condiciones</p>
+            <p>Politicas de Privacidad</p>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('.li-desplegable').toggleClass('active');
+                $('.iniciar').toggleClass('active1');
+                $('.header').toggleClass('active2');
+            });
+        });
+    </script>
+    <script>
+        var controladorDeLogo = false;
+            window.onscroll = function() {consideraScroll()};
+            function consideraScroll() {
+                if(window.pageYOffset>80){
+                    if(controladorDeLogo==true){
+                    }
+                    else if(controladorDeLogo==false){
+                        document.getElementsByClassName("logo")[0].classList.remove("contrae");
+                        document.getElementsByClassName("logo")[0].classList.add("expande");
+                        controladorDeLogo=true;
+                    }
+                    }
+                    else if(window.pageYOffset<=80){
+                        if(controladorDeLogo==true){
+                            document.getElementsByClassName("logo")[0].classList.remove("expande");
+                            document.getElementsByClassName("logo")[0].classList.add("contrae");
+                            controladorDeLogo=false;
+                }
+                else if(controladorDeLogo==false){
+                }
+            }
+        }
+    </script>
+</body>
+</html>
